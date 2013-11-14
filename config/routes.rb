@@ -3,6 +3,8 @@ Ticketee::Application.routes.draw do
   get "users/create"
   get "users/show"
   get "users/edit"
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
 
   root "projects#index"
 
